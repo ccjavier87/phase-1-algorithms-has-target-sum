@@ -1,5 +1,19 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+// iterate through all numbers in array
+for (let i=0; i < array.length; i++) {
+  //go through all numbers in array
+  for (let k=i+1; k < array.length; k++) {
+    //take one number and pair with another number in array
+      if ((array[i] + array[k]) === target) {
+        //console.log("i is", i, " and k is ", k)
+        return true
+    } 
+  }
+  
+}
+
+return false
 }
 
 /* 
@@ -8,6 +22,18 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  function takes array, and target integer
+   - determines if sum of any two numbers in array equals target
+    - take 1st number array[0] and add to second number array[1]
+      - if two numbers === target --> return true
+      - otherwise take array[0] and add to array[2] 
+      - loop through and add array[0] to all numbers until array[array.length]
+    - when true is not returned, 
+      - take second number array[1] and add to array[2]
+        - repeat
+
+
+
 */
 
 /*
